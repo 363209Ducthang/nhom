@@ -114,9 +114,28 @@ button img {
 
 /* ảnh home */
 .navbar-brand img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+}
+
+/* make navbar roughly twice as large */
+.navbar {
+    padding: 1rem 2rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 2rem;
+    padding: 0.75rem 1.5rem;
+}
+
+/* toggle button bigger */
+.navbar-toggler {
+    padding: 0.5rem 1rem;
+}
+.navbar-toggler-icon {
+    width: 2rem;
+    height: 2rem;
 }
 /* ảnh sss */
 .btn btn-light {
