@@ -1,0 +1,274 @@
+/* tập san */
+body {
+    background-color: #c8f6d9;
+    background: linear-gradient(120deg, #c8f6d9 0%, #7fe0a9 40%, #bffbe0 70%, #ffffff 100%);
+    min-height: 100vh;
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Nền gradient chuyển động */
+body{
+    background: linear-gradient(-45deg, #e6fff2, #ccf5e1, #d9fbe8, #f0fff4);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Animation nền */
+@keyframes gradientMove{
+    0%{ background-position: 0% 50%; }
+    50%{ background-position: 100% 50%; }
+    100%{ background-position: 0% 50%; }
+}
+
+/* DNA lớn mờ phía sau */
+body::before{
+    content: "🧬";
+    position: fixed;
+    font-size: 250px;
+    opacity: 0.05;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-20deg);
+    pointer-events: none;
+}
+
+/* Họa tiết chấm sinh học */
+body::after{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(#16a34a 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.05;
+    pointer-events: none;
+}
+.bio-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.bio-title {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #15803d, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.dna {
+    font-size: 32px;
+    color: #16a34a;
+}
+
+/* Viền Canva style */
+.bio-header::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 22px;
+    padding: 3px;
+    background: linear-gradient(135deg, #22c55e, #15803d);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/*  */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ảnh home */
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+/* ảnh sss */
+.btn btn-light {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: 5%;
+}
+/* video nhóm */
+.tv-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px auto;
+}
+.anhnhom {
+    display: flex;
+    justify-content: center;
+}
+/* TV frame for video */
+.tv-frame {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    background: #000;
+    padding: 20px;
+    border: 12px solid #333;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    margin-top: 40px;
+}
+.tv-frame video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+/* optional antenna effect */
+.tv-frame::before,
+.tv-frame::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 2px;
+    height: 30px;
+    background: #333;
+}
+.tv-frame::after {
+    left: 40px;
+}
+
+/* generic image frame */
+.image-frame {
+    width: 450px;
+    max-width: 90vw;
+    margin: 20px auto;
+    padding: 15px;
+    border: 8px solid #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    background: #f9f9f9;
+}
+.image-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/*ảnh trượt lên xuống  */
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    margin: 40px auto 20px;
+    border: 5px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.slide {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    /* keep all slides in document flow so transition works */
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* card noi dung */
+.card.mb-31 {
+    margin-bottom: 31px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 35%;
+    margin-right: 2%;
+}
+
+.card.mb-31 .row {
+    display: flex;
+    flex-direction: row;
+}
+
+.card.mb-32 {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+.card.mb-32 .row {
+    display: flex;
+    flex-direction: row;
+}
+
+.card.mb-33 {
+    margin-bottom: 33px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 35%;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+/* layout for cards with icon */
+.card-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.card-icon {
+    font-size: 36px;
+    color: #16a34a;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
